@@ -1,3 +1,3 @@
-# restaurant-page
+# Restaurant Page
 
-Made with create-webpack-app.
+A simple restaurant menu made with JS!
