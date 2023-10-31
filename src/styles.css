@@ -60,10 +60,23 @@ main {
   background-size: cover;
   padding-top: 60px;
 }
+main::after {
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  content: "";
+  background: rgba(0, 0, 0, 0.5);
+}
+main > * {
+  z-index: 3;
+}
 main > h1 {
   font-size: 70px;
   text-align: center;
-  max-width: 900px;
+  width: min(900px, 90vw);
   font-family: "Black Ops One";
   color: white;
   text-shadow: 0 0 10px black;
@@ -84,6 +97,7 @@ main > button {
   cursor: pointer;
 }
 main > div {
+  max-width: 90vw;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -106,4 +120,18 @@ main > div > div > p > span {
 main > div > div > img {
   width: 30px;
   height: 30px;
+}
+
+@media screen and (max-width: 500px) {
+  header {
+    flex-direction: column;
+    gap: 20px;
+    height: auto;
+  }
+  main {
+    padding-top: 100px;
+  }
+  main > h1 {
+    font-size: 50px;
+  }
 }
