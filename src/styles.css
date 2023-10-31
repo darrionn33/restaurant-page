@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap");
+
 html {
   box-sizing: border-box;
 }
@@ -14,7 +16,13 @@ html {
   -webkit-tap-highlight-color: transparent;
 }
 header {
-  background-color: burlywood;
+  position: absolute;
+  width: 100dvw;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: rgb(133, 60, 60);
+  height: 60px;
   color: white;
   display: flex;
   justify-content: space-between;
@@ -25,7 +33,6 @@ header .buttons {
   display: flex;
   gap: 15px;
   height: 100%;
-  margin-bottom: -20px;
 }
 header .buttons button {
   height: 100%;
@@ -36,7 +43,67 @@ header .buttons button {
 }
 header .buttons button.active-tab {
   background-color: white;
-  color: burlywood;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  color: rgb(133, 60, 60);
+  border-radius: 5px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background: url(./assets/chill-out-transformed.png);
+  min-height: 100dvh;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 60px;
+}
+main > h1 {
+  font-size: 70px;
+  text-align: center;
+  max-width: 900px;
+  font-family: "Black Ops One";
+  color: white;
+  text-shadow: 0 0 10px black;
+}
+main > p {
+  color: rgb(255, 234, 140);
+  font-weight: 900;
+  font-size: x-large;
+  text-shadow: 0 0 10px black;
+}
+main > button {
+  background-color: rgb(133, 60, 60);
+  color: white;
+  padding: 15px 30px;
+  font-size: medium;
+  font-weight: 600;
+  border-radius: 20px;
+  cursor: pointer;
+}
+main > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+main > div > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: transparent;
+}
+main > div > div > p > span {
+  color: rgb(133, 60, 60);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+main > div > div > img {
+  width: 30px;
+  height: 30px;
 }
