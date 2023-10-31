@@ -13,3 +13,30 @@ html {
   user-select: none;
   -webkit-tap-highlight-color: transparent;
 }
+header {
+  background-color: burlywood;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+header .buttons {
+  display: flex;
+  gap: 15px;
+  height: 100%;
+  margin-bottom: -20px;
+}
+header .buttons button {
+  height: 100%;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+  font-size: medium;
+}
+header .buttons button.active-tab {
+  background-color: white;
+  color: burlywood;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}

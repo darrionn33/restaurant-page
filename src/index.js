@@ -1,10 +1,26 @@
 import "./styles.css";
 import rootRender from "./rootRender";
+import header from "./header";
+import about from "./about";
+import menu from "./menu";
+import contact from "./contact";
+import toggleActiveTab from "./toggleActiveTab";
 
-const helloWorld = () => {
-  const helloWorld = document.createElement("p");
-  helloWorld.textContent = "Hello World!";
-  return helloWorld;
+rootRender(header());
+rootRender(about());
+
+document.querySelector("#about-button").onclick = () => {
+  rootRender("", "rpc");
+  rootRender(about());
+  toggleActiveTab("A");
 };
-
-rootRender(helloWorld(), "apc");
+document.querySelector("#menu-button").onclick = () => {
+  rootRender("", "rpc");
+  rootRender(menu());
+  toggleActiveTab("M");
+};
+document.querySelector("#contact-button").onclick = () => {
+  rootRender("", "rpc");
+  rootRender(contact());
+  toggleActiveTab("C");
+};
