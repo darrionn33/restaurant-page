@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.prod.js",
     "start": "webpack serve --open --config webpack.dev.js",
-    "gh-pages": "npm run build && git add . && git commit -m \"updating gh-pages site.\" && git push && git subtree push --prefix dist origin gh-pages"
+    "gh-pages": "npm run build && git add . && git commit -m \"updated gh-pages site.\" && git push && git subtree push --prefix dist origin gh-pages"
   },
   "keywords": [],
   "author": "",
