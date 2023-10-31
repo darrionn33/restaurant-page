@@ -4,7 +4,7 @@ export default function header(params) {
   buttonsDiv.classList.add("buttons");
 
   const title = document.createElement("h1");
-  title.textContent = "Restaurant Page";
+  title.textContent = "Chill Out Cafe";
 
   const aboutButton = document.createElement("button");
   aboutButton.id = "about-button";
