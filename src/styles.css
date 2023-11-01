@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap");
 
 html {
   box-sizing: border-box;
@@ -10,17 +11,17 @@ html {
   border: 0;
   padding: 0;
   margin: 0;
-  font-family: system-ui, Arial, sans-serif;
+  font-family: Oswald, system-ui, Arial, sans-serif;
   background-color: inherit;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
 }
 header {
-  position: absolute;
+  position: sticky;
   width: 100dvw;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 4;
   background-color: rgb(133, 60, 60);
   height: 60px;
   color: white;
@@ -72,6 +73,7 @@ main::after {
 }
 main > * {
   z-index: 3;
+  background: transparent;
 }
 main > h1 {
   font-size: 70px;
@@ -128,10 +130,16 @@ main > div > div > img {
     gap: 20px;
     height: auto;
   }
+  main::after {
+    background: none;
+  }
   main {
-    padding-top: 100px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    background: rgb(33, 33, 66);
   }
   main > h1 {
     font-size: 50px;
+    text-shadow: 0 0 20px white;
   }
 }
