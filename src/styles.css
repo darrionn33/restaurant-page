@@ -18,7 +18,7 @@ html {
 }
 header {
   position: sticky;
-  width: 100dvw;
+  width: 100%;
   top: 0;
   left: 0;
   z-index: 4;
@@ -141,5 +141,14 @@ main > div > div > img {
   main > h1 {
     font-size: 50px;
     text-shadow: 0 0 20px white;
+  }
+  main > p {
+    text-shadow: none;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  main > h1 {
+    font-size: 40px;
   }
 }
