@@ -55,7 +55,7 @@ main {
   justify-content: center;
   gap: 20px;
   background: url(./assets/chill-out-transformed-min.jpg);
-  min-height: 100dvh;
+  min-height: calc(100dvh - 60px);
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
