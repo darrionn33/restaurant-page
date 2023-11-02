@@ -16,6 +16,11 @@ export default function about(params) {
 
   const infoDiv = put("div");
 
+  const phoneDiv = put("div");
+  put(phoneDiv, "img", {
+    src: "./assets/phone-custom.png",
+  });
+  put(phoneDiv, "p", "8787678109");
   const locationDiv = put("div");
   put(locationDiv, "img", {
     src: "./assets/map-marker-custom.png",
@@ -38,6 +43,7 @@ export default function about(params) {
   });
   put(timingDiv, pTiming);
 
+  put(infoDiv, phoneDiv);
   put(infoDiv, locationDiv);
   put(infoDiv, timingDiv);
 

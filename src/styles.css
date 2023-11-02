@@ -76,7 +76,7 @@ main > * {
   background: transparent;
 }
 main > h1 {
-  font-size: 70px;
+  font-size: 60px;
   text-align: center;
   width: min(900px, 90vw);
   font-family: "Black Ops One";
@@ -108,16 +108,19 @@ main > div {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
 }
-main > div > div {
+main > div > div,
+main#contact > div > div > div {
   display: flex;
   align-items: center;
   gap: 10px;
   background-color: transparent;
 }
-main > div > div > p > span {
+main > div > div > p > span,
+main#contact > div > div > div > p > span {
   color: rgb(133, 60, 60);
   font-weight: 700;
   text-transform: uppercase;
+  margin-right: 5px;
 }
 main > div > div > img {
   width: 30px;
@@ -151,7 +154,20 @@ main > div > div > img {
   }
 }
 
-main#contact > iframe {
-  width: 400px;
+main#contact > div {
+  gap: 50px;
+}
+main#contact > div > iframe {
+  width: 100%;
   height: 300px;
+}
+main#contact > div > h1 {
+  text-align: center;
+  background: transparent;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+main#contact > div > div {
+  flex-direction: column;
+  align-items: flex-start;
 }
