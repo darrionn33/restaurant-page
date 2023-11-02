@@ -98,6 +98,10 @@ main > button {
   font-weight: 600;
   border-radius: 20px;
   cursor: pointer;
+  transition: background-color 0.5s;
+}
+main > button:hover {
+  background-color: rgb(161, 73, 73);
 }
 main > div {
   max-width: 90vw;
