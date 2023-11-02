@@ -59,7 +59,6 @@ main {
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 60px;
 }
 main::after {
   z-index: 1;

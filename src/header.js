@@ -1,29 +1,18 @@
+import put from "put-selector";
+
 export default function header(params) {
-  const header = document.createElement("header");
-  const buttonsDiv = document.createElement("div");
-  buttonsDiv.classList.add("buttons");
+  const header = put("header");
+  const buttonsDiv = put("div.buttons");
 
-  const title = document.createElement("h1");
-  title.textContent = "Chill Out Cafe";
+  const aboutButton = put("button#about-button.active-tab", "About");
+  const menuButton = put("button#menu-button", "Menu");
+  const contactButton = put("button#contact-button", "Contact");
 
-  const aboutButton = document.createElement("button");
-  aboutButton.id = "about-button";
-  aboutButton.classList.add("active-tab");
-  aboutButton.textContent = "About";
-
-  const menuButton = document.createElement("button");
-  menuButton.id = "menu-button";
-  menuButton.textContent = "Menu";
-
-  const contactButton = document.createElement("button");
-  contactButton.id = "contact-button";
-  contactButton.textContent = "Contact";
-
-  buttonsDiv.appendChild(aboutButton);
-  buttonsDiv.appendChild(menuButton);
-  buttonsDiv.appendChild(contactButton);
-  header.appendChild(title);
-  header.appendChild(buttonsDiv);
+  put(buttonsDiv, aboutButton);
+  put(buttonsDiv, menuButton);
+  put(buttonsDiv, contactButton);
+  put(header, "h2", "Chill Out Cafe");
+  put(header, buttonsDiv);
 
   return header;
 }
