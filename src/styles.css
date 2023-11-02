@@ -3,6 +3,7 @@
 
 html {
   box-sizing: border-box;
+  --background-solid-colour: rgb(15, 25, 58);
 }
 *,
 *::after,
@@ -136,7 +137,7 @@ main > div > div > img {
     background: none;
   }
   main {
-    background: rgb(33, 33, 66);
+    background: var(--background-solid-colour);
   }
   main > h1 {
     font-size: 50px;
@@ -171,17 +172,26 @@ main#contact > div > div {
   align-items: flex-start;
 }
 main#menu {
-  background: white;
+  background: var(--background-solid-colour);
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 main#menu::after {
   background: none;
 }
-.menu-item {
-  width: 90vw;
+.menu-section {
+  width: min(90dvw, 800px);
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+}
+.menu-section > h2 {
+  background: transparent;
 }
 .menu-item > div.dot-leaders {
   overflow: hidden;
+}
+.menu-item > div:nth-child(1) {
+  display: inline-block;
+  min-width: max-content;
+  color: rgb(190, 92, 92);
 }
