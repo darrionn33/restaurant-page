@@ -1,49 +1,48 @@
+import put from "put-selector";
+
 export default function about(params) {
-  const about = document.createElement("main");
-  const h1 = document.createElement("h1");
-  h1.textContent = "Come and have some delicious food!";
-  const p = document.createElement("p");
-  p.textContent = "Tasty and affordable!";
-  const orderButton = document.createElement("button");
-  orderButton.textContent = "Order Now";
-  orderButton.id = "order-button";
-  orderButton.title = "Menu";
+  const about = put("main#about");
+  put(about, "h1", "Come and have some delicious food!");
+  put(about, "p", "Tasty and affordable!");
+  const orderButton = put("button#order-button");
+  put(about, orderButton, {
+    textContent: "Order Now",
+    title: "Menu",
+  });
 
   orderButton.onclick = () => {
     document.querySelector("#menu-button").click();
   };
 
-  const infoDiv = document.createElement("div");
+  const infoDiv = put("div");
 
-  const locationDiv = document.createElement("div");
-  const locationIcon = new Image();
-  const pLocation = document.createElement("p");
-  locationIcon.src = "./assets/map-marker-custom.png";
-  pLocation.textContent =
-    "Main Campus Rd, North Eastern Hill University, Shillong, Meghalaya 793022";
-  locationDiv.appendChild(locationIcon);
-  locationDiv.appendChild(pLocation);
+  const locationDiv = put("div");
+  put(locationDiv, "img", {
+    src: "./assets/map-marker-custom.png",
+  });
+  put(
+    locationDiv,
+    "p",
+    "Main Campus Rd, North Eastern Hill University, Shillong, Meghalaya 793022"
+  );
 
-  const timingDiv = document.createElement("div");
-  const timingIcon = new Image();
-  const pTiming = document.createElement("p");
-  const span = document.createElement("span");
+  const timingDiv = put("div");
+
+  const pTiming = put("p");
+  const span = put("span");
   span.textContent = "Mon-Sun:";
-  timingIcon.src = "./assets/clock-outline-custom.png";
   pTiming.textContent = "11 A.M. to 9 P.M.";
   pTiming.insertAdjacentElement("afterbegin", span);
-  timingDiv.appendChild(timingIcon);
-  timingDiv.appendChild(pTiming);
+  put(timingDiv, "img", {
+    src: "./assets/clock-outline-custom.png",
+  });
+  put(timingDiv, pTiming);
 
-  infoDiv.appendChild(locationDiv);
-  infoDiv.appendChild(timingDiv);
+  put(infoDiv, locationDiv);
+  put(infoDiv, timingDiv);
 
-  about.appendChild(h1);
-  about.appendChild(p);
-  about.appendChild(orderButton);
-  about.appendChild(infoDiv);
-
-  about.id = "about";
+  put(about, orderButton);
+  put(about, infoDiv);
 
   return about;
 }
