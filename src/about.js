@@ -43,5 +43,7 @@ export default function about(params) {
   about.appendChild(orderButton);
   about.appendChild(infoDiv);
 
+  about.id = "about";
+
   return about;
 }
